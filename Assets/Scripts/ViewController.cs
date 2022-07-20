@@ -25,7 +25,7 @@ public class ViewController : MonoBehaviour
     private float end;
     private float t;
     private float animationLengh = 2;
-    private bool isScliding;
+    private bool isSliding;
 
 
     void Start()
@@ -76,14 +76,15 @@ public class ViewController : MonoBehaviour
 
     public void SlidingToTheEdge(float value)
     {
+        if (isSliding) return;
         start = scrollbar.value;
         end = value;
-        isScliding = true;
+        isSliding = true;
     }
 
     void Update()
     {
-        if (!isScliding)
+        if (!isSliding)
         {
             t = 0.0f;
         }
@@ -93,7 +94,7 @@ public class ViewController : MonoBehaviour
             scrollbar.value = Mathf.Lerp(start, end, t);
             if (scrollbar.value == end)
             {
-                isScliding = false;
+                isSliding = false;
             }
         }
     }

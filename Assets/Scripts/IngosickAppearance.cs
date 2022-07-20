@@ -12,7 +12,6 @@ public class IngosickAppearance : MonoBehaviour
     private AudioSource audioComp;
     public void Disappearance()
     {
-        transform.gameObject.SetActive(false);
         door.SetActive(false);
     }
 

@@ -25,18 +25,18 @@ public class Model : MonoBehaviour
 
 }
 
-[CustomEditor(typeof(ViewController))]
-public class customButton : Editor
-{
-    public override void OnInspectorGUI()
-    {
-        DrawDefaultInspector();
+//[CustomEditor(typeof(ViewController))]
+//public class customButton : Editor
+//{
+//    public override void OnInspectorGUI()
+//    {
+//        DrawDefaultInspector();
 
-        ViewController myScript = (ViewController)target;
-        if (GUILayout.Button("Save Score"))
-        {
-            myScript.SaveScore();
-        }
-    }
+//        ViewController myScript = (ViewController)target;
+//        if (GUILayout.Button("Save Score"))
+//        {
+//            myScript.SaveScore();
+//        }
+//    }
 
-}
+//}
